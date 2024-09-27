@@ -1,0 +1,180 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  perspective: 1000px; /* Added 3D perspective */
+}
+
+/* Main To-Do App Container with 3D Effect */
+.todo-app {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.3); /* Glassmorphism effect */
+  backdrop-filter: blur(15px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.6s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+}
+
+.todo-app:hover {
+  transform: rotateX(10deg) rotateY(10deg); /* 3D rotation on hover */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 36px;
+  color: #2d3748;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2); /* Subtle text glow */
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 25px;
+  width: 100%;
+  perspective: 800px; /* Adding 3D perspective to inputs */
+}
+
+.input-container input {
+  flex-grow: 1;
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid #e2e8f0;
+  border-radius: 15px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.8);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Neumorphism effect */
+}
+
+.input-container input:focus {
+  border-color: #3182ce;
+  box-shadow: 0px 0px 15px rgba(49, 130, 206, 0.7); /* Dynamic glow on focus */
+}
+
+button {
+  padding: 15px 30px;
+  border: none;
+  background-color: #3182ce;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15); /* Slight 3D button shadow */
+}
+
+button:hover {
+  background-color: #2b6cb0;
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.clear-btn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  background-color: #e53e3e;
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+}
+
+.clear-btn:hover {
+  background-color: #c53030;
+  transform: translateY(-3px); /* Lift effect */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #e2e8f0;
+  transition: transform 0.3s ease;
+  background: rgba(255, 255, 255, 0.7); /* Glassmorphism in items */
+  border-radius: 10px;
+}
+
+.todo-item:hover {
+  background-color: #e6fffa;
+  transform: translateX(10px); /* Dynamic movement on hover */
+}
+
+.completed span {
+  text-decoration: line-through;
+  color: #a0aec0;
+}
+
+.todo-item input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #cbd5e0;
+  border-radius: 5px;
+  margin-right: 10px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.todo-item button {
+  background-color: #e53e3e;
+  font-size: 14px;
+  padding: 8px 15px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1); /* Slight depth effect */
+}
+
+.todo-item button:hover {
+  background-color: #9b2c2c;
+  transform: translateY(-2px); /* Button lift on hover */
+}
+
+.todo-item button:disabled {
+  background-color: #cbd5e0;
+  cursor: not-allowed;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 600px) {
+  .todo-app {
+    max-width: 100%;
+    padding: 30px 20px;
+  }
+
+  .input-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .todo-item {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
