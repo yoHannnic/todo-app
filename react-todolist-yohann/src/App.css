@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+  background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); /* Soft blue gradient */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,8 +20,8 @@ body {
 .todo-app {
   width: 100%;
   max-width: 600px;
-  background: rgba(255, 255, 255, 0.3); /* Glassmorphism effect */
-  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.9); /* Lighter background for better contrast */
+  backdrop-filter: blur(10px);
   padding: 40px 30px;
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
@@ -38,9 +38,9 @@ body {
 
 h1 {
   font-size: 36px;
-  color: #2d3748;
+  color: #007acc; /* Consistent blue color */
   margin-bottom: 15px;
-  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2); /* Subtle text glow */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Subtle text glow */
 }
 
 .input-container {
@@ -56,23 +56,23 @@ h1 {
   flex-grow: 1;
   padding: 15px;
   font-size: 18px;
-  border: 2px solid #e2e8f0;
+  border: 2px solid #007acc; /* Consistent border color */
   border-radius: 15px;
   outline: none;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Neumorphism effect */
 }
 
 .input-container input:focus {
-  border-color: #3182ce;
-  box-shadow: 0px 0px 15px rgba(49, 130, 206, 0.7); /* Dynamic glow on focus */
+  border-color: #005f8d; /* Darker shade on focus */
+  box-shadow: 0px 0px 15px rgba(0, 94, 141, 0.7); /* Dynamic glow on focus */
 }
 
 button {
   padding: 15px 30px;
   border: none;
-  background-color: #3182ce;
+  background-color: #007acc; /* Consistent button color */
   color: white;
   border-radius: 12px;
   cursor: pointer;
@@ -82,7 +82,7 @@ button {
 }
 
 button:hover {
-  background-color: #2b6cb0;
+  background-color: #005f8d; /* Darker blue on hover */
   transform: translateY(-3px); /* Slight lift on hover */
 }
 
@@ -90,13 +90,13 @@ button:hover {
   width: 100%;
   padding: 15px;
   margin-top: 15px;
-  background-color: #e53e3e;
+  background-color: #e53e3e; /* Red for clear button */
   transition: transform 0.3s ease;
   border-radius: 12px;
 }
 
 .clear-btn:hover {
-  background-color: #c53030;
+  background-color: #c53030; /* Darker red on hover */
   transform: translateY(-3px); /* Lift effect */
 }
 
@@ -114,12 +114,13 @@ ul {
   padding: 15px;
   border-bottom: 1px solid #e2e8f0;
   transition: transform 0.3s ease;
-  background: rgba(255, 255, 255, 0.7); /* Glassmorphism in items */
+  background: rgba(255, 255, 255, 0.8); /* Slightly darker for items */
   border-radius: 10px;
+  margin-bottom: 5px;
 }
 
 .todo-item:hover {
-  background-color: #e6fffa;
+  background-color: #e6f7ff; /* Light blue on hover */
   transform: translateX(10px); /* Dynamic movement on hover */
 }
 
@@ -132,14 +133,14 @@ ul {
   flex-grow: 1;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #cbd5e0;
+  border: 1px solid #007acc; /* Consistent input border */
   border-radius: 5px;
   margin-right: 10px;
   background: rgba(255, 255, 255, 0.9);
 }
 
 .todo-item button {
-  background-color: #e53e3e;
+  background-color: #e53e3e; /* Red for delete button */
   font-size: 14px;
   padding: 8px 15px;
   margin-left: 10px;
@@ -148,7 +149,7 @@ ul {
 }
 
 .todo-item button:hover {
-  background-color: #9b2c2c;
+  background-color: #9b2c2c; /* Darker red on hover */
   transform: translateY(-2px); /* Button lift on hover */
 }
 
